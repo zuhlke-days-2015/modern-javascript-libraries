@@ -1,5 +1,6 @@
 import Ractive from 'ractive';
 import html from './movies.ract';
+import _ from 'lodash';
 
 class Movies {
 
@@ -14,7 +15,7 @@ class Movies {
     });
 
     this.movieApi.searchByDuration(duration)
-      .then(response => this.ractive.set('movies', response.data.movies))
+      .then(response => this.ractive.set('movies', _.shuffle(response.data.movies).slice(0, 9)))
       .catch(error => console.log(error));
   }
 

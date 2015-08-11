@@ -5,7 +5,7 @@
       <figure class="movie__item__inner">
         <div class="movie__item__inner__img">
           <a href="{{imdbUrl}}">
-            <img ng-src="{{omdbImgUrl}}" alt="" onerror="this.src='http://placehold.it/343x200'" />
+            <img src="{{omdbImgUrl}}" alt="" />
           </a>
         </div>
         <figcaption>
