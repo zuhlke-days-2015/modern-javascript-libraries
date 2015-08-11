@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div id="searchform" name="searchform" decorator="parsley" autocomplete="off">
+      <div class="col-md-1">
+        <div class="form-group big-text text-center search-bar">
+          From
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <input class="form-control input-lg z-depth-1 big-text" type="text" name="name" value="{{origin}}" placeholder="London" required>
+        </div>
+      </div>
+      <div class="col-md-1">
+        <div class="form-group big-text text-center search-bar">
+          To
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <input class="form-control input-lg z-depth-1 big-text" type="text" name="name" value="{{destination}}" placeholder="Paris" required>
+        </div>
+      </div>
+      <div class="col-md-1">
+        <div class="form-group big-text text-center search-bar">
+          <button type="buton" class="btn btn-default btn-lg" on-click="searchMovie" disabled="{{!isFormValid}}">
+            {{#if loading}}
+            <i class="fa fa-search fa-spin"></i>
+            {{else}}
+            <i class="fa fa-search"></i>
+            {{/if}} Search
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div id="map-canvas"></div>
+    </div>
+  </div>
+</div>
